@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truck and Trailer Technician | Hamilton & Brantford | 24/7 Mobile Service</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -27,10 +28,10 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
+        /* NAVIGATION */
         header {
-            background-color: rgba(5, 5, 5, 0.95);
-            padding: 1rem 0;
+            background-color: rgba(5, 5, 5, 0.98);
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -39,10 +40,18 @@
         }
 
         header .container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1200px; margin: 0 auto; }
-        .logo a { text-decoration: none; color: white; font-weight: 900; font-size: 1.5rem; }
+        .logo a { text-decoration: none; color: white; font-weight: 900; font-size: 1.6rem; letter-spacing: 1px; }
         .logo span { color: var(--accent-gold); }
+        
         nav ul { display: flex; list-style: none; gap: 2rem; }
-        nav ul li a { text-decoration: none; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--accent-gold); 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; 
+            transition: 0.3s; 
+        }
         nav ul li a:hover { color: white; }
 
         /* PARALLAX SECTIONS */
@@ -52,31 +61,36 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            border-bottom: 1px solid #222;
         }
 
+        /* Overlay for text readability */
         section::before {
             content: "";
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.8); 
+            background: rgba(0, 0, 0, 0.85); 
             z-index: 1;
         }
 
         .container { position: relative; z-index: 2; width: 90%; max-width: 1200px; margin: 0 auto; }
 
-        h2 { text-align: center; font-size: 2.8rem; color: var(--accent-gold); margin-bottom: 60px; text-transform: uppercase; }
+        /* TYPOGRAPHY & HEADERS */
+        .section-header { text-align: center; margin-bottom: 60px; }
+        h2 { font-size: 3rem; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 10px; }
+        .header-line { width: 80px; height: 4px; background: var(--accent-gold); margin: 0 auto 20px; }
+        .section-desc { font-size: 1.1rem; color: #bbb; max-width: 750px; margin: 0 auto; }
+
         h3 { 
             font-size: 1.8rem; 
             color: var(--white-text); 
-            background: var(--slate-gray); 
-            padding: 10px 20px; 
-            border-left: 5px solid var(--accent-gold); 
-            margin: 50px 0 30px; 
+            background: rgba(30, 30, 30, 0.9); 
+            padding: 15px 25px; 
+            border-left: 6px solid var(--accent-gold); 
+            margin: 60px 0 30px; 
             text-transform: uppercase;
         }
 
-        /* HERO */
+        /* HERO SECTION */
         .hero {
             height: 100vh;
             background-image: url('images/hero-bg.jpg');
@@ -87,24 +101,28 @@
         }
         .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; color: white; }
         .hero h1 span { color: var(--accent-gold); }
-        .hero p { font-size: 1.5rem; font-weight: 400; }
+        .hero p { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; color: #eee; }
 
-        /* SERVICE GRID */
+        /* SERVICE CARDS */
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
         .service-card {
-            background: rgba(15, 15, 15, 0.9);
-            padding: 35px;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 40px;
             border: 1px solid #333;
             border-radius: 4px;
             transition: 0.4s ease;
         }
-        .service-card:hover { border-color: var(--accent-gold); transform: translateY(-10px); background: #000; }
+        .service-card:hover { 
+            border-color: var(--accent-gold); 
+            transform: translateY(-10px); 
+            background: #000; 
+        }
         .service-card h4 { color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; }
-        .service-card p { color: #ccc; font-size: 0.95rem; }
+        .service-card p { color: #ccc; font-size: 1rem; }
 
         /* GALLERY */
         .gallery-grid {
@@ -114,23 +132,35 @@
         }
         .gallery-img { 
             width: 100%; 
-            height: 300px; 
+            height: 350px; 
             object-fit: cover; 
-            border: 3px solid var(--accent-gold); 
+            border: 4px solid var(--accent-gold); 
             transition: 0.3s;
         }
-        .gallery-img:hover { transform: scale(1.03); }
+        .gallery-img:hover { transform: scale(1.02); }
+
+        /* ABOUT BOX */
+        .about-box {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 50px;
+            border: 1px solid var(--accent-gold);
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
         /* FOOTER */
         footer { background: #000; padding: 80px 0 30px; border-top: 4px solid var(--accent-gold); }
         .footer-flex { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px; text-align: center; }
-        .footer-box h4 { color: white; margin-bottom: 15px; text-transform: uppercase; }
-        .footer-box p { color: var(--accent-gold); font-weight: 700; margin-bottom: 5px; }
+        .footer-box h4 { color: white; margin-bottom: 15px; text-transform: uppercase; font-size: 1.2rem; }
+        .footer-box p { color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
 
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1rem; }
             section { background-attachment: scroll; }
-            nav ul { display: none; }
+            nav ul { display: none; } /* Mobile users will focus on Call buttons */
         }
     </style>
 </head>
@@ -152,33 +182,38 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container" data-aos="zoom-out">
+        <div class="container" data-aos="fade-up">
             <h1>TRUCK & TRAILER <br><span>TECHNICIAN</span></h1>
-            <p>Your expert choice for comprehensive repair across Hamilton & Brantford.</p>
+            <div class="header-line"></div>
+            <p>HAMILTON & BRANTFORD | 24/7 MOBILE REPAIR</p>
         </div>
     </section>
 
     <section id="services" style="background-image: url('images/services-bg.jpg');">
         <div class="container">
-            <h2 data-aos="fade-down">Our Specialized Support 24/7</h2>
+            <div class="section-header" data-aos="fade-down">
+                <h2>Our Specialized Support 24/7</h2>
+                <div class="header-line"></div>
+                <p class="section-desc">Professional-grade heavy duty solutions brought directly to your location, ensuring your fleet never stops moving.</p>
+            </div>
 
             <h3 data-aos="fade-right">Roadside & Specialized Support</h3>
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
                     <h4>24/7 Emergency Roadside Assistance</h4>
-                    <p>Immediate, reliable on-site support to get you moving fast, anytime, anywhere.</p>
+                    <p>Immediate, reliable on-site support to get you moving fast, anytime, anywhere in the Golden Horseshoe.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <h4>Welding & Fabrication</h4>
-                    <p>Professional repair for structural components and customized fabrication needs.</p>
+                    <p>Professional repair for structural components and customized fabrication needs for trucks and trailers.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <h4>Telematics & GPS Installation</h4>
-                    <p>Keep your fleet visible and optimized with advanced tracking solutions.</p>
+                    <p>Keep your fleet visible and optimized with advanced tracking and electronic logging solutions.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <h4>Fluid Analysis</h4>
-                    <p>Prevent expensive failures with predictive diagnostics on engine and system fluids.</p>
+                    <p>Prevent expensive failures with predictive diagnostics on engine, transmission, and hydraulic fluids.</p>
                 </div>
             </div>
 
@@ -186,39 +221,39 @@
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
                     <h4>Engine Diagnosis & Repair</h4>
-                    <p>Comprehensive troubleshooting and repair for all North American engine models.</p>
+                    <p>Comprehensive troubleshooting and repair for all North American engine models including Cummins, Detroit, and Paccar.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <h4>Transmission & Drivetrain</h4>
-                    <p>Ensuring smooth power delivery through expert gearbox and driveline maintenance.</p>
+                    <p>Ensuring smooth power delivery through expert gearbox, clutch, and driveline maintenance and repair.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <h4>Aftertreatment System</h4>
-                    <p>Maintenance and repair for critical emissions systems (DPF, SCR, DOC).</p>
+                    <p>Specialized maintenance and repair for critical emissions systems including DPF, SCR, and DOC units.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <h4>Braking & Cooling Systems</h4>
-                    <p>Expert brake jobs, air system repair, and radiator/cooling service.</p>
+                    <p>Expert air brake jobs, air system leak repair, and radiator/cooling system maintenance to prevent overheating.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <h4>Electrical System</h4>
-                    <p>Advanced electrical troubleshooting for modern truck electronic architecture.</p>
+                    <p>Advanced electrical troubleshooting for sensors, wiring harnesses, and modern truck electronic architecture.</p>
                 </div>
             </div>
 
-            <h3 data-aos="fade-right">Trailer Maintenance (Flatbed & Dry Van)</h3>
+            <h3 data-aos="fade-right">Trailer Maintenance & Repair</h3>
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
                     <h4>Suspension & Axles</h4>
-                    <p>Repair and alignment for air-ride and spring suspensions.</p>
+                    <p>Complete repair and alignment for air-ride and spring suspensions, including bush replacements and axle repairs.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <h4>Body & Structural Work</h4>
-                    <p>Dry van roof, door, and floor repairs, and flatbed frame restoration.</p>
+                    <p>Dry van roof, door, and floor repairs, alongside flatbed frame restoration and side rail welding.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <h4>Landing Gear & Liftgates</h4>
-                    <p>Complete service and repair for reliable loading operations.</p>
+                    <p>Complete hydraulic and mechanical service for reliable loading and landing gear operations.</p>
                 </div>
             </div>
 
@@ -226,15 +261,15 @@
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
                     <h4>Annual & Semi-Annual Inspections</h4>
-                    <p>Keep your equipment legal and safe with certified MTO inspections.</p>
+                    <p>Keep your equipment legal and safe with certified MTO inspections and safety certifications.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <h4>Preventive Maintenance (PM) Programs</h4>
-                    <p>Customized schedules to prevent downtime and extend equipment life.</p>
+                    <p>Customized maintenance schedules to prevent downtime, improve fuel economy, and extend equipment life.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <h4>Emission Testing</h4>
-                    <p>Certified testing to meet provincial environmental standards.</p>
+                    <p>Certified testing and repairs to ensure your heavy-duty vehicles meet provincial environmental standards.</p>
                 </div>
             </div>
         </div>
@@ -242,32 +277,49 @@
 
     <section id="gallery" style="background-image: url('images/gallery-bg.jpg');">
         <div class="container">
-            <h2 data-aos="fade-in">Our Work in Action</h2>
+            <div class="section-header" data-aos="fade-in">
+                <h2>Our Work in Action</h2>
+                <div class="header-line"></div>
+                <p class="section-desc">Quality repairs on North American trucks and trailers across Ontario.</p>
+            </div>
             <div class="gallery-grid">
-                <img src="images/work-1.jpg" alt="Repair 1" class="gallery-img" data-aos="flip-left">
-                <img src="images/work-2.jpg" alt="Repair 2" class="gallery-img" data-aos="flip-right">
-                <img src="images/work-3.jpg" alt="Repair 3" class="gallery-img" data-aos="flip-left">
-                <img src="images/work-4.jpg" alt="Repair 4" class="gallery-img" data-aos="flip-right">
+                <img src="images/work-1.jpg" alt="Technician working on engine" class="gallery-img" data-aos="zoom-in">
+                <img src="images/work-2.jpg" alt="Trailer structural repair" class="gallery-img" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/work-3.jpg" alt="Heavy duty truck roadside" class="gallery-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/work-4.jpg" alt="MTO safety inspection" class="gallery-img" data-aos="zoom-in" data-aos-delay="300">
             </div>
         </div>
     </section>
 
     <section id="about" style="background-image: url('images/about-bg.jpg');">
-        <div class="container" data-aos="fade-up">
-            <h2>About Truck & Trailer Technician</h2>
-            <div style="max-width: 850px; margin: 0 auto; text-align: center; font-size: 1.15rem;">
-                <p style="margin-bottom: 20px;">Located in <strong>Hamilton</strong> and <strong>Brantford, Ontario</strong>, Truck and Trailer Technician has been providing reliable, expert heavy-duty repair services since 2023.</p>
-                <p>Our mission is to keep your North American equipment running smoothly, from standard preventative maintenance to critical 24/7 roadside assistance. Whether you operate a fleet or are an owner-operator, we bring professional diagnostics, structural expertise, and compliance solutions directly to you.</p>
+        <div class="container">
+            <div class="section-header" data-aos="fade-down">
+                <h2>About Truck & Trailer Technician</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="about-box" data-aos="fade-up">
+                <p style="font-size: 1.3rem; margin-bottom: 25px; font-weight: 700;">
+                    Founded in 2023 and serving the Hamilton and Brantford areas, Truck and Trailer Technician is dedicated to providing the highest standard of mobile heavy-duty repair. 
+                </p>
+                <p style="font-size: 1.15rem; color: #ccc;">
+                    Our mission is to minimize your downtime by bringing expert mechanical solutions directly to your yard or the roadside. Whether you manage a large fleet of dry vans and flatbeds or are a dedicated owner-operator with a Peterbilt or Kenworth, we combine advanced diagnostics, structural welding expertise, and strict MTO compliance to keep your business moving forward. Reliability is our core value, and 24/7 support is our promise.
+                </p>
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="container">
-            <div class="footer-flex">
+            <div class="footer-flex" data-aos="fade-in">
                 <div class="footer-box">
                     <div class="logo">TRUCK<span>&</span>TRAILER</div>
-                    <p style="color: #666;">Serving Hamilton & Brantford</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">PROFESSIONAL MOBILE TECHNICIANS</p>
+                </div>
+                <div class="footer-box">
+                    <h4>Service Areas</h4>
+                    <p>Hamilton, ON</p>
+                    <p>Brantford, ON</p>
+                    <p>Surrounding Regions</p>
                 </div>
                 <div class="footer-box">
                     <h4>Direct Support</h4>
@@ -275,13 +327,20 @@
                     <p>Email: truckntrailertech@gmail.com</p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 50px; color: #444; font-size: 0.8rem;">&copy; 2023 - 2026 Truck and Trailer Technician. All Rights Reserved.</p>
+            <p style="text-align: center; margin-top: 60px; color: #444; font-size: 0.8rem; border-top: 1px solid #222; padding-top: 25px;">
+                &copy; 2023 - 2026 Truck and Trailer Technician. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: false, mirror: true });
+        AOS.init({ 
+            duration: 1000, 
+            once: false, 
+            mirror: true,
+            offset: 120 
+        });
     </script>
 </body>
 </html>
